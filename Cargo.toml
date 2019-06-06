@@ -1,0 +1,28 @@
+[package]
+name = "kafka-wordcount-example"
+version = "0.1.0"
+authors = ["Arthur Rand <art.rand@gmail.com>"]
+edition = "2018"
+
+[[bin]]
+name = "wordcount-server"
+path = "src/server.rs"
+
+[[bin]]
+name = "wordcount-client"
+path = "src/client.rs"
+
+
+[dependencies]
+actix = "0.8"
+actix-web = "1.0.0"
+redis = "0.10.0"
+futures = "0.1.27"
+rdkafka = "0.20.0"
+tokio = "0.1"
+log = "*"
+env_logger = "*"
+serde_json = "1.0"
+serde = "1.0"
+serde_derive = "1.0"
+

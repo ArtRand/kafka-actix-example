@@ -1,0 +1,13 @@
+version: '3'
+services:
+  redis:
+    image: redis:5.0.2
+    ports:
+      - 6379:6379
+  kafka:
+    image: spotify/kafka
+    environment:
+      ADVERTISED_HOST: localhost
+      ADVERTISED_PORT: 9092
+    ports:
+      - 9092:9092
